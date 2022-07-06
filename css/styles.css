@@ -27,6 +27,25 @@ body {
     background-color: var(--background-color);
 }
 
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+
+    outline: 2px solid tomato;
+    background-color: gainsboro;
+}
+
+.titel{
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+.list{
+    list-style: none;
+    margin: 0;
+    padding: 0;}
+
 /* Верхняя линия */
 .logo{
     font-family: 'Raleway';
@@ -40,6 +59,12 @@ body {
 
 .header .logo-studio{
     color: var(--logo-color);
+}
+
+.site-nav,
+.header-contacts{
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .site-nav .link{
@@ -80,6 +105,8 @@ body {
     background-color: var(--footer-background-color);
 }
 .hero .titel{
+    margin-top: 0;
+    margin-bottom: 30px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -92,9 +119,13 @@ body {
 }
 
 .hero .btn{
+    min-width: 200px;
+    padding: 10px 32px;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
+    border-radius: 4px;
+    border: 0;
 
     color: var(--background-color);
     background-color: var(--activation-color);
@@ -102,10 +133,6 @@ body {
     cursor: pointer;
     font-family: inherit;
 }
-
-/* Особености */
-.peculiarities .list{
-    list-style: none;}
 
 .peculiarities .list-titel{
     font-weight: 700;
@@ -118,17 +145,12 @@ body {
 /* Чем мы занимаемся */
 /* Наша команда */
 .work .titel,
-.team .title{
+.team .titel{
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
     color: var(--additional-text-color);
-}
-
-.work .list,
-.team .list{
-    list-style: none;
 }
 
 .team .list-titel{
@@ -147,9 +169,6 @@ body {
 
 /* portfolio */
 /* Фильтр */
-.filter .list{
-    list-style: none;
-}
     
 .filter .btn{
     font-weight: 500;
@@ -168,10 +187,6 @@ body {
 }
 
 /* Проекты */
-.projects .list{
-    list-style: none;
-}
-
 .projects .list-titel{
     font-weight: 700;
     font-size: 18px;
