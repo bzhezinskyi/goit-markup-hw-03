@@ -56,6 +56,12 @@ li {
 }
 
 /* Верхняя линия */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
 .header {
   background-color: var(--header-bacground-color);
 }
@@ -70,7 +76,6 @@ li {
   font-size: 26px;
   line-height: 1.19;
   color: var(--activation-color);
-
   text-decoration: none;
 }
 
@@ -78,10 +83,15 @@ li {
   color: var(--logo-color);
 }
 
-.site-nav,
-.header-contacts {
-  margin-top: 0;
-  margin-bottom: 0;
+.site-nav {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin-left: 93px;
+}
+
+.site-nav .item + .item {
+  margin-left: 50px;
 }
 
 .site-nav .link {
@@ -94,6 +104,17 @@ li {
 
 .site-nav .link.current {
   color: var(--activation-color);
+}
+
+.header-contacts {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin-left: auto;
+}
+
+.header-contacts .item + .item {
+  margin-left: 50px;
 }
 
 .header-contacts .link {
