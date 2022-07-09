@@ -17,6 +17,8 @@
   --logo-color: #000000;
   --activation-color: #2196f3;
   --footer-link-color: rgba(255, 255, 255, 0.6);
+  --border-color: #eeeeee;
+  --border-header-color: #ececec;
 }
 
 body {
@@ -38,10 +40,11 @@ li {
 }
 
 .container {
-  padding: 94px 0;
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
+  padding-top: 94px;
+  padding-bottom: 94px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -66,6 +69,7 @@ li {
 
 .header {
   background-color: var(--header-bacground-color);
+  border-bottom: 1px solid var(--border-header-color);
 }
 
 .header > .container {
@@ -226,6 +230,10 @@ li {
 .team .item {
   width: calc((100%-90px) / 4);
   margin-right: 30px;
+  text-align: center;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team .item:nth-child(4n) {
@@ -245,11 +253,12 @@ li {
   text-align: center;
   color: var(--additional-text-color);
 }
+
 .team .photo {
   margin-bottom: 10px;
 }
 
-.team-titel {
+.team .list-titel {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -258,7 +267,7 @@ li {
   color: var(--additional-text-color);
 }
 
-.team-text {
+.team .list-text {
   margin-bottom: 30px;
   font-size: 16px;
   line-height: 1.19;
@@ -309,9 +318,14 @@ li {
 }
 
 .projects .item {
-  width: calc ((100%-60px) / 3);
+  box-sizing: border-box;
+
+  width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
+
+  background: var(--header-bacground-color);
+  border: 1px solid var(--border-color);
 }
 
 .projects .item:nth-last-child(-n + 3) {
@@ -331,6 +345,7 @@ li {
 
 .projects .list-titel {
   margin-bottom: 4px;
+  margin-left: 24px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -340,8 +355,20 @@ li {
 }
 
 .projects .list-text {
+  padding-bottom: 20px;
+  margin-left: 24px;
   font-size: 16px;
   line-height: 1.87;
+}
+
+.border {
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+
+  background: var(--header-bacground-color);
+  border: 1px solid var(--border-color);
 }
 
 /* Подвал */
