@@ -27,7 +27,6 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  background-color: var(--background-color);
 }
 
 h1,
@@ -43,8 +42,6 @@ li {
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
-  padding-top: 94px;
-  padding-bottom: 94px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -54,20 +51,33 @@ li {
   margin-bottom: 0;
   text-align: center;
 }
+
 .list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* Верхняя линия */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
 
-.main-nav {
-  display: flex;
-  align-items: center;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
+/* Верхняя линия */
+
 .header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+
   background-color: var(--header-bacground-color);
   border-bottom: 1px solid var(--border-header-color);
 }
@@ -77,7 +87,14 @@ li {
   padding-bottom: 0;
 }
 
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
+  margin-right: 93px;
+
   font-family: 'Raleway';
   font-weight: 700;
   font-size: 26px;
@@ -92,9 +109,6 @@ li {
 
 .site-nav {
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  margin-left: 93px;
 }
 
 .site-nav .item + .item {
@@ -115,8 +129,6 @@ li {
 
 .header-contacts {
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
   margin-left: auto;
 }
 
@@ -146,10 +158,14 @@ li {
 
 /* index */
 /* Шапка */
+
 .hero {
   background-color: var(--footer-background-color);
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
+
 .hero .titel {
   margin-top: 0;
   margin-bottom: 30px;
@@ -180,6 +196,10 @@ li {
 }
 
 /* Особености */
+.peculiarities {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
 .peculiarities > .container {
   padding-bottom: 0;
@@ -210,6 +230,10 @@ li {
 /* Чем мы занимаемся */
 /* Наша команда */
 
+.work {
+  padding-bottom: 94px;
+}
+
 .work .list {
   display: flex;
 }
@@ -221,6 +245,11 @@ li {
 
 .work .item:nth-child(3n) {
   margin-right: 0px;
+}
+
+.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .team .list {
@@ -254,12 +283,17 @@ li {
   color: var(--additional-text-color);
 }
 
-.team .photo {
+/* .team .photo {
   margin-bottom: 10px;
+} */
+.team .photo-text {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .team .list-titel {
   margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -268,22 +302,33 @@ li {
 }
 
 .team .list-text {
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
+
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
 }
 
 /* portfolio */
-/* Фильтр */
+/* Проекты */
 
-.filter .list {
-  display: flex;
-  justify-content: center;
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
-.filter > .container {
-  padding-bottom: 0;
+.portfolio .filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 34px;
+}
+
+.filter .item {
+  margin-right: 8px;
+}
+
+.filter .item:last-child {
+  margin-right: 0;
 }
 
 .filter .btn {
@@ -310,9 +355,7 @@ li {
   background-color: var(--activation-color);
 }
 
-/* Проекты */
-
-.projects .list {
+.projects {
   display: flex;
   flex-wrap: wrap;
 }
@@ -323,29 +366,31 @@ li {
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
-
-  background: var(--header-bacground-color);
-  border: 1px solid var(--border-color);
 }
 
 .projects .item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
+
 .projects .item:nth-child(3n) {
   margin-right: 0px;
 }
 
-.projects > .container {
-  padding-top: 50px;
-}
+.projects .photo-text {
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
 
-.projects .photo {
-  margin-bottom: 20px;
+  background: var(--header-bacground-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
 }
 
 .projects .list-titel {
   margin-bottom: 4px;
-  margin-left: 24px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -355,28 +400,17 @@ li {
 }
 
 .projects .list-text {
-  padding-bottom: 20px;
-  margin-left: 24px;
   font-size: 16px;
   line-height: 1.87;
 }
 
-.border {
-  padding-top: 20px;
-  padding-right: 24px;
-  padding-bottom: 20px;
-  padding-left: 24px;
-
-  background: var(--header-bacground-color);
-  border: 1px solid var(--border-color);
-}
-
 /* Подвал */
+
 .footer {
   background-color: var(--footer-background-color);
 }
 
-.footer > .container {
+.footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -400,7 +434,7 @@ li {
   list-style: none;
 }
 
-.footer .item {
+.footer .item:not(:last-child) {
   margin-bottom: 9px;
 }
 
